@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalise First Word in Sentence</title>
+  </head>
+  <body>
+    <script>
+      function toSentenceCase(mySentence) {
+        const words = mySentence.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+        console.log(words.join(" "));
+      }
+
+      toSentenceCase("we are neoGrammers");
+    </script>
+  </body>
+</html>
