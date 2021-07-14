@@ -2,11 +2,7 @@
 
 1. Write a program to input 2 numbers and display the sum of the numbers to the console.
 
-    ```
-    Input Number 1: 20
-    Input Number 2: 40
-    Sum : 60
-    ```
+    `Input Number 1: 20 Input Number 2: 40 Sum : 60`
 
 1. Write a JavaScript program to calculate the simple interest given P,R,T with the given formula.
    Formula:
@@ -17,10 +13,7 @@
    R = rate
    SI = simple interest
 
-    ```
-    Input: P=100, R=6%, T=2
-    Output: 12
-    ```
+    `Input: P=100, R=6%, T=2 Output: 12`
 
 1. Write a program to calculate the kinetic energy of a body with mass 'm' and volume 'v'.
 
@@ -30,10 +23,7 @@
    `T = (T - 32) 9/5`
    'T' is the temperature on the Fahrenheit scale.
 
-    ```
-    Input: 56
-    Output: 13.33333
-    ```
+    `Input: 56 Output: 13.33333`
 
 1. Calculate the area, perimeter of a s1.re of side 'a'. Also, calculate the surface area and the volume of a cube of side 'a'.
 
@@ -49,13 +39,8 @@
 
 1. Given the Cost Price(CP) and Selling Price(SP) of a product. Write a Program to Calculate the Profit or Loss.
 
-    ```
-    Input: CP = 1500, SP = 2000
-    Output: 500 Profit
-
-    Input: CP = 3125, SP = 1125
-    Output: 2000 Loss
-    ```
+    `Input: CP = 1500, SP = 2000 Output: 500 Profit
+    Input: CP = 3125, SP = 1125 Output: 2000 Loss`
 
 1. Write a program to calculate sum of N natural digits, as input by the users?
 
