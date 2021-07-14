@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All 002 Medium Solutio</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        function arrayLength(arr){
-            console.log("Length: ", arr.length);
-        }
+      function arrayLength(arr) {
+        console.log("Length: ", arr.length);
+      }
 
-        function indexOf(arr,key){
-            for(var i = 0; i < arr.length; i++){
-                if(arr[i] == key)
-                    console.log("Index at:", i);
-            }
+      function indexOf(arr, key) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] == key) console.log("Index at:", i);
         }
-        function replace(arr, id, value){
-            for(var i = 0; i < arr.length; i++){
-                if(arr[i] == id)
-                    arr[i] = value;
-            }
-            console.log("Replaced, new array is: ", arr);
+      }
+      function replace(arr, id, value) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] == id) arr[i] = value;
         }
-        function mergeArray(arr1, arr2){
-            console.log("Merged Array is: ", arr1.concat(arr2));
-        }
-        arrayLength([1,5,3,7,8]);
-        indexOf([1,6,3,5,8,9], 3);
-        replace([1,5,3,5,6,8], 5, 10);
-        mergeArray([1,3,5], [2,4,6]);
+        console.log("Replaced, new array is: ", arr);
+      }
+      function mergeArray(arr1, arr2) {
+        console.log("Merged Array is: ", arr1.concat(arr2));
+      }
+      function charAt(str, ind) {
+        console.log(str[ind]);
+      }
 
+      function minDate(date1, date2) {
+        if (date1 < date2) console.log(date1, " is smaller");
+        else console.log(date2, " is smaller");
+      }
+      arrayLength([1, 5, 3, 7, 8]);
+      indexOf([1, 6, 3, 5, 8, 9], 3);
+      replace([1, 5, 3, 5, 6, 8], 5, 10);
+      mergeArray([1, 3, 5], [2, 4, 6]);
+      charAt("neoGcamp", 4);
+      var date1 = new Date("2021-05-25");
+      var date2 = new Date("2021-01-24");
+      minDate(date1, date2);
     </script>
-</body>
+  </body>
 </html>
