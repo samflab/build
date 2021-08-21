@@ -7,3 +7,9 @@ increaseFont.addEventListener("click", function(){
     currentSize = parseFloat(style);
     textField.style.fontSize = (currentSize + 2) + 'px';
 })
+
+decreaseFont.addEventListener("click", function(){
+    style = window.getComputedStyle(textField, null).getPropertyValue("font-size");
+    currentSize = parseFloat(style);
+    textField.style.fontSize =(currentSize - 2) + 'px';
+})
