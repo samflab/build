@@ -20,8 +20,8 @@
     Formula : `0.5 * m * v * v`
 
 1. Write a program to convert Fahrenheit to Celsius. For Fahrenheit to Celsius conversion use:
-   `T = (T - 32) 9/5`
-   'T' is the temperature on the Fahrenheit scale.
+   `C = (F - 32) * 5/9`
+   'F' and 'C' are the temperatures on the Fahrenheit scale and Celsius scale respectively.
 
     `Input: 56 Output: 13.33333`
 
@@ -53,10 +53,10 @@
 
     ```
     Input : 4
-    Output : 1
-    3
+    Output : 7
     5
-    7
+    3
+    1
     ```
 
 1. Write a JavaScript program to compute the sum of all digits that occur in a given string.
