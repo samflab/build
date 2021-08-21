@@ -2,7 +2,7 @@
 
 - Take user's complete birthday 
 - And his/her lucky number. 
-- Now, find out if sum of diigits of birthday is divisible by the lucky number. 
+- Now, find out if sum of digits of birthday is divisible by the lucky number. 
 - Show the result to user with some graphics. 
 
 ## additional
@@ -14,4 +14,4 @@
 Use [modulo operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) to separate digits.
 
 ## stack
-Can use CLI, vanillaJS and or React for this. 
+Can use vanillaJS and or React for this. 
