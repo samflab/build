@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>004 String Beginner & Intermediate</title>
+  </head>
+  <body>
+    <script>
+      const convertUpper= str => console.log(str.toUpperCase());
+
+      const appendStrings= (str1, str2) => console.log(str2.concat(str1));
+
+      const countChar = str => {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] != " ") {
+            count++;
+          }
+        }
+        console.log(count);
+      }
+
+      const stringToNum = str => console.log(Number(str));
+
+      const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+      let result = "";
+      const removeVowel = str => {
+        for (let i = 0; i < str.length; i++) {
+          if (!vowels.includes(str[i])) {
+            result += str[i];
+          }
+        }
+        console.log(result);
+      }
+
+      const checkAlphaNumeric = str => {
+        let code;
+        let flag = 0;
+        for (var i = 0; i < str.length; i++) {
+          code = str.charCodeAt(i);
+          if (
+            !(code > 47 && code < 58) &&
+            !(code > 64 && code < 91) &&
+            !(code > 96 && code < 123)
+          ) {
+            console.log("string is alpha numeric");
+          }
+        }
+      }
+
+      const threeLengths = (str1, str2, str3) => {
+        let longest = Math.max(str1.length, str2.length);
+        longest = Math.max(longest, str3.length);
+
+        let smallest = Math.min(str1.length, str2.length);
+        smallest = Math.min(smallest, str3.length);
+
+        console.log("longest string: ");
+        if (longest == str1.length) console.log(str1);
+        else if (longest == str2.length) console.log(str2);
+        else console.log(str3);
+
+        console.log("smallest string: ");
+        if (smallest == str1.length) console.log(str1);
+        else if (smallest == str2.length) console.log(str2);
+        else console.log(str3);
+      }
+
+      function vowelsAndConsts(str){
+        let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+        let vowelCount = 0, constCount = 0;
+        for(var i = 0; i < str.length; i++){
+            if(vowels.includes(str[i]) && str[i] != " "){
+                vowelCount++;
+                constCount = str.length - vowelCount;
+            }    
+        }
+        console.log("vowels: ", vowelCount);
+        console.log("consonants: ", constCount);
+      }
+
+      function strLength(str){
+          let count = 0;
+          while(str[count] !== undefined){
+              count ++;
+          }
+          console.log("length is:", count);
+      }
+
+      convertUpper("lalallalaa");
+      appendStrings("Good", "Morning");
+      countChar("Masudha Meher");
+      stringToNum("3124312432");
+      removeVowel("Everything happens for a reason");
+      checkAlphaNumeric("kk!@#567");
+      threeLengths("Apple", "Banana", "watermelon");
+      vowelsAndConsts("Big brown fox jumps over a lazy dog");
+      strLength("Today, the sun was very bright!");
+    </script>
+  </body>
+</html>
