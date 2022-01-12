@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //EASY
+      //Given a and b, your function should return the value of a<sup>b</sup>
+      const powerd = (a, b) => Math.pow(a, b);
+      console.log(powerd(2, 3));
+
+      //Given length of a regular hexagon, your function should return area of the hexagon.
+      const hexaArea = (s) => (3 * Math.sqrt(3) * Math.pow(s, 2)) / 2;
+      console.log(hexaArea(23));
+
+      //Given a sentence, your functions should return the number of words in the sentence.
+      const numberOfWords = (line) => line.split(" ").length;
+      console.log(numberOfWords("Today is very cold here"));
+
+      //Given n numbers, your function should return the minimum of them all. The number of parameters won't be accepted from user
+      const minimum = (array) => Math.min(...array);
+      console.log(minimum([1, 2, 4, 67, 0, -1, -4, 20]));
+
+      //Given n numbers, your function should return the maximum of them all. The number of parameters won't be accepted from user.
+      const maximum = (array) => Math.max(...array);
+      console.log(maximum([10, 20, 100, -10, -50, 1]));
+
+      //Given three angles of a triange, your function should return if it is a scalen, isosceles, equilateral triangle or not a triangle at all.
+      const checkTriangle = (a1, a2, a3) => {
+        if (a1 === a2 && a2 === a3 && a3 === a1) return "Equilateral";
+        if (a1 === a2 || a1 === a3 || a3 === a2) return "Isosceles";
+        if (a1 + a2 + a3 === 180 && (a1 != a2) != a3) return "Scalen";
+        if (a1 + a2 + a3 != 180) return "Not a triangle";
+      };
+      console.log(checkTriangle(60, 60, 60));
+
+      //MEDIUM
+      //Given an array, your function should return the length of the array.
+      const arrayLength = (array) => array.length;
+      console.log(arrayLength([1, 2, 3, 5, 6, 78, 9]));
+
+      //Given an array and an item, your function should return the index at which the item is present.
+      const fetchItem = (array, item) => {
+        for (let i = 0; i < array.length; i++) if (array[i] === item) return i;
+      };
+      console.log(fetchItem([1, 2, 3, 4, 5, 6, 7], 2));
+
+      //Given an array and two numbers, your function should replace all entries of first number in an array with the second number.
+      const swapNumbers = (array, num1, num2) => {
+        for (let i = 0; i < array.length; i++)
+          if (array[i] === num1) array[i] = num2;
+        return array;
+      };
+
+      console.log(swapNumbers([1, 2, 3, 3, 4, 3, 7], 3, 10));
+
+      //Given two arrays, your function should return single merged array.
+      const mergeArray = (array1, array2) => [...array1, ...array2];
+      console.log([10, 20, 30], [50, 60, 70]);
+
+      //Given a string and an index, your function should return the character present at that index in the string.
+      const findCharacter = (string, index) => console.log(string[index]);
+      findCharacter("Masudha", 3);
+
+      //Given two dates, your function should return which one comes before the other.
+
+      const minDate = (date1, date2) => {
+        if (date1 < date2) return date1;
+        else return date2;
+      };
+      const date1 = new Date("2021-05-25");
+      const date2 = new Date("2022-01-24");
+      console.log(minDate(date1, date2));
+
+      //Write a function which generates a secret code from a given string, by shifting characters of alphabet by N places.
+      const secretCode = (str, n) => {
+        let result = "";
+        for (let i = 0; i < str.length; i++) {
+          const charCode = str.charCodeAt(i);
+          if (
+            charCode < 65 ||
+            charCode > 122 ||
+            (charCode > 90 && charCode < 97)
+          )
+            result += str[i];
+          else {
+            let newCharCode = charCode + Math.ceil(n % 26);
+
+            if (charCode >= 97 && newCharCode > 122) {
+              newCharCode = newCharCode - 122 + 96;
+            }
+            if (charCode <= 90 && newCharCode > 90) {
+              newCharCode = newCharCode - 90 + 64;
+            }
+
+            result += String.fromCharCode(newCharCode);
+          }
+        }
+        console.log(result);
+      };
+
+      secretCode("masudha", 3);
+
+      //Given a sentence, return a sentence with first letter of all words as capital.
+      const capitalise = (sentence) => {
+        const words = sentence.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+        console.log(words.join(" "));
+      };
+
+      capitalise("Neogcamp is awesome");
+
+      //Given an array of numbers, your function should return an array in the ascending order.
+      const sortArr = (array) => array.sort((a, b) => a - b);
+      console.log(sortArr([20, 30, 10, 11, 23, 09, 05, -6, -100]));
+
+      //Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
+      const reverseWords = (sen) => sen.split("").reverse().join("").split(" ").reverse().join(" ")
+      console.log(reverseWords("Today is a good day"))
+    </script>
+  </body>
+</html>
